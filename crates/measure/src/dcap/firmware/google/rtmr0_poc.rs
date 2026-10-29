@@ -12,6 +12,8 @@ use x509_parser::{certificate::X509Certificate, prelude::FromDer};
 use super::{Endorsement, GoldenMeasurement, verify_endorsement};
 use crate::{dcap::DcapFirmware, event::Register};
 
+mod firmware_coverage;
+
 const CCEL: &[u8] =
     include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/tests/fixtures/gcp-rtmr0/ccel.bin"));
 const QUOTE: &[u8] =
